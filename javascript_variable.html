@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in JavaScript</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #2c3e50;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+            font-size: 24px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        ol {
+            padding-left: 20px;
+            margin: 10px 0 20px 0;
+        }
+
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-top: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+        }
+
+        b {
+            color: #e67e22;
+        }
+
+        i {
+            color: #8e44ad;
+        }
+
+        br {
+            margin-bottom: 10px;
+        }
+
+        .note-section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="note-section">
+        <h3>Variable</h3>
+        <p>Variables are storage locations where you store the data and use it.</p>
+        <ol>
+            <li>Declaration</li>
+            <li>Initialization</li>
+            <li>Assignment</li>
+        </ol>
+        <pre>
+Syntax - keyword variable_name;
+        </pre>
+        <p>Variables are declared using keywords.</p>
+
+        <h3>Var</h3>
+        <p>It configures a <b>function-scoped</b> variable. You can declare it in any block of a function and access it from any other block in the same function.</p>
+
+        <p><b>Shadowing</b> - It is the process of re-declaring a variable with the same name within the same scope.</p>
+        <pre>
+e.g -
+    var x;        // Declaration
+    x = 10;       // Initialization
+    var x = 20;   // Shadowing
+        </pre>
+
+        <p><b>Hoisting</b> - It's the mechanism of accessing a variable from any location regardless of order.</p>
+        <pre>
+e.g -
+    x = 10;  // Initialization
+    var x;   // Hoisting
+        </pre>
+
+        <h3>Let</h3>
+        <p>It configures a <b>block-scoped</b> variable. It is accessible within the block and inner blocks.</p>
+        <p><i>Use when the variable needs to be reassigned.</i></p>
+        <pre>
+let x;      // Declaration
+x = 10;     // Assignment
+        </pre>
+
+        <h3>Const</h3>
+        <p>It configures a <b>block-scoped</b> variable. Cannot be reassigned.</p>
+        <p><i>Use when the value should not change.</i></p>
+        <pre>
+const x;         // Invalid
+x = 10;          // Invalid
+const x = 10;    // Valid
+x = 20;          // Invalid
+        </pre>
+
+        <h3>Global Variable</h3>
+        <p>A variable declared outside a function is considered <b>global</b>. You can also explicitly attach a variable to the global object.</p>
+        <pre>
+window.global_var = "Deepak";
+
+console.log(window.global_var); // Accessible anywhere in code
+        </pre>
+    </div>
+</body>
+</html>

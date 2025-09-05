@@ -1,68 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Output Technique in Javascript</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Output Technique in JavaScript</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <style>
+        body {
+            background-color: #f4f4f9;
+            padding: 40px 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .note-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            border-left: 5px solid #007bff;
+            padding-left: 15px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            margin-top: 10px;
+        }
+
+        ol > li {
+            margin-bottom: 30px;
+        }
+
+                code {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Javascript Output Technique</h1>
-    <p>Output is Rendering result in UI</p>
-    <ol>
-        <li><h3>Alert("Message")</h3>
-        <p>It pops the message box</p>
-        <p>syntax - alert("Message");</p>
-        <button onclick="showalert()" class="btn btn-primary mb-5">Alert</button></li>
+    <div class="note-container">
+        <h1>JavaScript Output Techniques</h1>
+        <p>Output is the process of rendering results in the UI using various JavaScript methods.</p>
+        <ol>
+            <li>
+                <h3>alert("message")</h3>
+                <p>Displays a popup message.</p>
+                <p><code>alert("Message");</code></p>
+                <button onclick="showalert()" class="btn btn-primary">Show Alert</button>
+            </li>
 
+            <li>
+                <h3>confirm("message")</h3>
+                <p>Displays a confirmation box. Returns <code>true</code> for OK, <code>false</code> for Cancel.</p>
+                <p><code>confirm("Are you sure?");</code></p>
+                <button onclick="showconfirm()" class="btn btn-primary">Show Confirm</button>
+            </li>
 
-        <li><h3>Confirm("message | expression (ok - True or cancle - False)")</h3>
-        <p>Similar to alert but option for ok or cancel - Return Boolean Value </p>
-        <p>syntax - confirm("Message return True or false")</p></li>
-        <button onclick="showconfirm()" class="btn btn-primary mb-5">Confirm</button></li>
+            <li>
+                <h3>document.write("...")</h3>
+                <p>Writes directly to the document (and replaces the entire DOM).</p>
+                <p><code>document.write("Hello World");</code></p>
+                <button onclick="document_write()" class="btn btn-primary">Use document.write()</button>
+            </li>
 
+            <li>
+                <h3>textContent</h3>
+                <p>Replaces only the text inside an element — HTML tags will not be rendered.</p>
+                <p><code>element.textContent = "Plain text";</code></p>
+                <p id="text">This is normal text (before textContent).</p>
+                <button onclick="text_Content()" class="btn btn-primary">Use textContent</button>
+            </li>
 
-        <li><h3>document.write("message | Expression | HTML")</h3>
-        <p>It renders output on a new screen of same page</p>
-        <p>syntax - document.write(" This is Html")</p>
-       <button onclick="document_write()" class="btn btn-primary mb-5">document.write()</button></li></li>
+            <li>
+                <h3>innerHTML</h3>
+                <p>Renders HTML content inside an element — tags are interpreted as HTML.</p>
+                <p><code>element.innerHTML = "HTML content";</code></p>
+                <p id="text_2">This is normal text (before innerHTML).</p>
+                <button onclick="inner_HTML()" class="btn btn-primary">Use innerHTML</button>
+            </li>
+        </ol>
+    </div>
 
+    <script>
+        function showalert() {
+            alert("This is an alert!");
+        }
 
-       <li><h3>TextContent </h3>
-       <p>Used with selector  - Renders Only text container - Render onlt Text </p>
-       <p>syntax - document.querySelect('tagname').textContent = "This is TextContent with HTNL"</p> 
-       <p id="text">This is Normal Sentence without HTML</p>
-        <button onclick="text_Content()" class="btn btn-primary mb-5">TextContent</button></li>
-        
-       <li><h3>InnerHTML </h3>
-       <p>Used with Selector - Render HTML inside Container - render as a child element </p>
-       <p id="text_2">This is Normal Sentence Without HTML</p></li>
-       <button onclick="inner_HTML()" class="btn btn-primary mb-5">InnerHTML</button></li>
-    </ol>
+        function showconfirm() {
+            let result = confirm("Do you confirm this?");
+            alert("Confirm result: " + result);
+        }
+
+        function document_write() {
+            alert("This will overwrite the page!");
+            document.write("Document content replaced successfully.");
+        }
+
+        function text_Content() {
+            document.querySelector('#text').textContent = "This is textContent — HTML will not render.";
+        }
+
+        function inner_HTML() {
+            document.getElementById('text_2').innerHTML = "This is innerHTML <strong>with bold HTML content</strong>";
+        }
+    </script>
 </body>
-<script>
-
-function showalert(){
-    alert("This is alert !")
-}
-
-function showconfirm(){
-   let result =  confirm("This is Confirm !")
-    alert("confirm Value is :" + result)
-}
-
-let document_write = function (){
-    alert("This is Document")
-  document.write("Deleted Successfully..")
-}
-
-function text_Content(){
-    document.querySelector('#text').textContent = "This is textContent without HTML";
-}
-
-function inner_HTML(){
-    document.getElementById('text_2').innerHTML = "This is innerHTML <b> with HTML </p>"
-}
-
-</script>
 </html>
