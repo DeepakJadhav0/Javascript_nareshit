@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output technique javascript</title>
+</head>
+<body onload="bodyload()">
+    <h1>Javascript Input techniques</h1>
+    <p>Input is process of accepting data from user</p>
+
+    <ol>
+        <li><h3>Query String</h3>
+            <p>Input is passed using URL - accessing useing window.location.search</p>
+            <dl>
+
+        <dt>Category</dt>
+
+        <dd id="lblCategory"></dd>
+
+        <dt>Product</dt>
+
+        <dd id="lblProduct"></dd>
+
+        <dt>Brand</dt>
+
+        <dd id="lblBrand"></dd>
+
+    </dl>
+        </li>
+
+    </ol>
+
+    <h3>Propmt</h3>
+
+</body>
+<script>
+
+    function bodyload(){
+        let params = new URLSearchParams(window.location.search)
+
+        document.getElementById("lblCategory").textContent = params.get("category")
+        document.getElementById("lblProduct").textContent = params.get('product')
+        document.getElementById("lblBrand").textContent = params.get('brand')
+        
+
+    }
+
+prompt("Enter Prompt")
+// let result  = new URLSearchParams(window.location.search)
+
+// let name = result.get("name");
+// let age = result.get("age");
+
+// console.log("name is " + name + "and Age is " + age)
+
+// let obect_1 = {
+//     name : "name",
+//     age : 30
+// } 
+
+// const params = new URLSearchParams(obect_1);
+
+// console.log(params.toString())
+
+</script>
+</html>

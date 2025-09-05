@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output Technique in Javascript</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <h1>Javascript Output Technique</h1>
+    <p>Output is Rendering result in UI</p>
+    <ol>
+        <li><h3>Alert("Message")</h3>
+        <p>It pops the message box</p>
+        <p>syntax - alert("Message");</p>
+        <button onclick="showalert()" class="btn btn-primary mb-5">Alert</button></li>
+
+
+        <li><h3>Confirm("message | expression (ok - True or cancle - False)")</h3>
+        <p>Similar to alert but option for ok or cancel - Return Boolean Value </p>
+        <p>syntax - confirm("Message return True or false")</p></li>
+        <button onclick="showconfirm()" class="btn btn-primary mb-5">Confirm</button></li>
+
+
+        <li><h3>document.write("message | Expression | HTML")</h3>
+        <p>It renders output on a new screen of same page</p>
+        <p>syntax - document.write(" This is Html")</p>
+       <button onclick="document_write()" class="btn btn-primary mb-5">document.write()</button></li></li>
+
+
+       <li><h3>TextContent </h3>
+       <p>Used with selector  - Renders Only text container - Render onlt Text </p>
+       <p>syntax - document.querySelect('tagname').textContent = "This is TextContent with HTNL"</p> 
+       <p id="text">This is Normal Sentence without HTML</p>
+        <button onclick="text_Content()" class="btn btn-primary mb-5">TextContent</button></li>
+        
+       <li><h3>InnerHTML </h3>
+       <p>Used with Selector - Render HTML inside Container - render as a child element </p>
+       <p id="text_2">This is Normal Sentence Without HTML</p></li>
+       <button onclick="inner_HTML()" class="btn btn-primary mb-5">InnerHTML</button></li>
+    </ol>
+</body>
+<script>
+
+function showalert(){
+    alert("This is alert !")
+}
+
+function showconfirm(){
+   let result =  confirm("This is Confirm !")
+    alert("confirm Value is :" + result)
+}
+
+let document_write = function (){
+    alert("This is Document")
+  document.write("Deleted Successfully..")
+}
+
+function text_Content(){
+    document.querySelector('#text').textContent = "This is textContent without HTML";
+}
+
+function inner_HTML(){
+    document.getElementById('text_2').innerHTML = "This is innerHTML <b> with HTML </p>"
+}
+
+</script>
+</html>
