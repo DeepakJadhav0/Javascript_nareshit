@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JavaScript String & Methods </title>
+<style>
+  /* Basic reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    padding: 40px 20px;
+    color: #333;
+  }
+
+  .note-container {
+    background-color: #fff;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  }
+
+  .note-title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    border-left: 6px solid #007bff;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+
+  .note-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 25px;
+  }
+
+  .code-section {
+    background-color: #272822;
+    color: #f8f8f2;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    padding: 20px 25px;
+    border-radius: 6px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    box-shadow: inset 0 0 10px #1a1a1a;
+  }
+</style>
+<script>
+  let name = "Deepak,jadhav,india,usa"
+
+</script>
+</head>
+<body>
+  <div class="note-container">
+    <h1 class="note-title">String</h1>
+    <p class="note-description">
+        String is an itration with group of characters enclosed in quotes
+
+        <ol>
+            <li>Double Quotes - " "</li>
+            <li>Single Quotes - ' '</li>
+            <li>Backtrack Quotes - ` `</li>
+        </ol>
+        
+     </p>
+     <br>
+    <pre class="code-section">
+    let firstName = "Deepak";
+    let lastName = "jadhav";
+    var age = 20;
+
+    let info = "Student name is " + firstName  + lastName + "and my age is " + age; 
+    let info = `Student name is ${firstName} ${lastName} and age is $`
+    </pre>
+    
+  </div>
+
+    <div class="note-container">
+    <h1 class="note-title">String Formatting </h1>
+    <p class="note-description">
+        To provide Various methods are used to format string dynammically.
+        <ol>
+            <li>toUpperCase() - used to convert string in Uppercase.</li>
+            <li>toUpperCase() - used to convert string in lowercase.</li>
+        </ol>
+        
+     </p>
+     <br>
+    <pre class="code-section">
+    var name = "john Snow"
+
+    console.log(name.toUpperCase()). // JOHN Snow
+      console.log(name.lowerCase()). // JOHN Snow
+      
+    </pre>
+    
+        <div class="note-container">
+    <h1 class="note-title">String Manipulation </h1>
+    <p class="note-description">
+        is used to Manipulat string 
+        <ol>
+            <li>length() - returns total count of char in string </li>
+            <li>indexOf('char') - returns the first occurance index no. of char</li>
+            <li>lastIndexOf("char") - returns the index of last occurance</li>
+            <li>startsWith('char') - return boolen true or false</li>
+            <li>endsWith('char') -  returns boolean value</li>
+        </ol>
+         
+     </p>
+     <br>
+    <pre class="code-section">
+    var name = "john Snow"
+
+    console.log(name.toUpperCase()). // JOHN Snow
+      console.log(name.lowerCase()). // JOHN Snow
+      
+    </pre>
+  </div>
+</body>
+</html>

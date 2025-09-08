@@ -6,83 +6,107 @@
     <title>String</title>
     <script>
 
-        function VerifyName(){
-            var username = document.getElementById('txtName').value;
-            var lblName = document.getElementById('lblName');
+        // function VerifyName(){
+        //     var username = document.getElementById('txtName').value;
+        //     var lblName = document.getElementById('lblName');
 
-            if(username.length == 0){
-                lblName.innerHTML= `<span style = "color:red" > Name is Required </span>`;
-            }
-            else if(username.length < 4){
-                lblName.innerHTML = `<span style = "color : green"> Name is too short </span>`;
-            }
+        //     if(username.length == 0){
+        //         lblName.innerHTML= `<span style = "color:red" > Name is Required </span>`;
+        //     }
+        //     else if(username.length < 4){
+        //         lblName.innerHTML = `<span style = "color : green"> Name is too short </span>`;
+        //     }
 
-            console.log("VArifyname is Running")
+        //     console.log("VArifyname is Running")
 
-        }
+        // }
 
-        function VerifyComments(){
-            let commentTxt = document.getElementById("txtComments").value
-            let commentlbl = document.getElementById("lblComments")
+        // function VerifyComments(){
+        //     let commentTxt = document.getElementById("txtComments").value
+        //     let commentlbl = document.getElementById("lblComments")
 
-            commentlbl.innerHTML = `<span style=" color: red " >${(commentTxt.length - 100)} comments left</span>`
-        }
+        //     commentlbl.innerHTML = `<span style=" color: red " >${(commentTxt.length - 100)} comments left</span>`
+        // }
 
-        function HideMessage(){
-              document.getElementById("lblComments").innerHTML = " ";
-        }
+        // function HideMessage(){
+        //       document.getElementById("lblComments").innerHTML = " ";
+        // }
 
-        function VerifyEmail(){
-           let email =  document.getElementById('txtEmail').value;
-           let lblEmail = document.getElementById('lblEmail');
+        // function VerifyEmail(){
+        //    let email =  document.getElementById('txtEmail').value;
+        //    let lblEmail = document.getElementById('lblEmail');
 
-           if(email.indexOf('@') === -1){
-            lblEmail.innerHTML = `<pan style = "color : red"> Enter Valid Email </span>`
-           }else if(!email.endsWith("@gmail.com")){
-            lblEmail.innerHTML = `<pan style = "color : red"> use Valif Email </span>`
-           }else{
-            lblEmail.innerHTML = " "
-           }
+        //    if(email.indexOf('@') === -1){
+        //     lblEmail.innerHTML = `<pan style = "color : red"> Enter Valid Email </span>`
+        //    }else if(!email.endsWith("@gmail.com")){
+        //     lblEmail.innerHTML = `<pan style = "color : red"> use Valif Email </span>`
+        //    }else{
+        //     lblEmail.innerHTML = " "
+        //    }
 
-        }
+        // }
+
+        // function verifyOtp(){
+        //     let otp = document.getElementById('otp').value;
+        //     let otplbl =document.getElementById('lblotp');
+
+        //     if(otp.trim() == '3400'){
+        //         document.write("Otp Success")
+        //     }else{
+        //         alert("Invalid OTp")
+        //     }
+        // }
+
+
+    //    function caseSwap(str){
+        
+    //     lower_str = str.toLowerCase()
+
+    //     console.log(lower_str[0].toUpperCase() + lower_str.slice(1))
+
+    //    }
+
+    //    caseSwap("welcome to javascript ")
+    function extractEmail(email){
+
+        let [userName , domain] = email.split('@')
+
+        console.log("User name is :" + userName)
+        console.log("Domain is :"+ domain)
+    }
+
+
+    let email = prompt("Enter Email ID")
+
+    extractEmail(email)
+
+    // var email = "Deepakjadhav@gmail.com"
+
+    // let [name , email2]= email.split('@')
+    // console.log(name + email2)
 
     </script>
 </head>
 
 <body>
 
-    <dl>
-
+    <!-- <dl>
         <dt>Your Name</dt>
-
         <dd><input type="text" onkeyup="VerifyName()" onblur="VerifyName()" id="txtName"></dd>
-
         <dd id="lblName"></dd>
-
         <dt>Email</dt>
-
         <dd><input type="text" onkeyup="VerifyEmail()"  onblur="VerifyEmail()" id="txtEmail"></dd>
-
         <dd id="lblEmail"></dd>
-
         <dt>Your Comments</dt>
-
         <dd>
-
             <textarea onblur="HideMessage()" id="txtComments" rows="4" onkeyup="VerifyComments()" maxlength="100" cols="40"></textarea>
-
         </dd>
-
         <dd id="lblComments"></dd>
-
         <dd></dd>
-
+        <label for="otp" id="lblotp">Enter your otp :</label>
+        <input type="text" name="otp" id="otp" onblur="verifyOtp()">
     </dl>
+    <button onclick="VerifyName()">Submit</button> -->
 
-    <button onclick="VerifyName()">Submit</button>
-
-</body>
-
-</html>
 </body>
 </html>
