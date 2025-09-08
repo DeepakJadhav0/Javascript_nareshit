@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <script>
+
+        function VerifyName(){
+            var username = document.getElementById('txtName').value;
+            var lblName = document.getElementById('lblName');
+
+            if(username.length == 0){
+                lblName.innerHTML= `<span style = "color:red" > Name is Required </span>`;
+            }
+            else if(username.length < 4){
+                lblName.innerHTML = `<span style = "color : green"> Name is too short </span>`;
+            }
+
+            console.log("VArifyname is Running")
+
+        }
+
+        function VerifyComments(){
+            let commentTxt = document.getElementById("txtComments").value
+            let commentlbl = document.getElementById("lblComments")
+
+            commentlbl.innerHTML = `<span style=" color: red " >${(commentTxt.length - 100)} comments left</span>`
+        }
+
+        function HideMessage(){
+              document.getElementById("lblComments").innerHTML = " ";
+        }
+
+        function VerifyEmail(){
+           let email =  document.getElementById('txtEmail').value;
+           let lblEmail = document.getElementById('lblEmail');
+
+           if(email.indexOf('@') === -1){
+            lblEmail.innerHTML = `<pan style = "color : red"> Enter Valid Email </span>`
+           }else if(!email.endsWith("@gmail.com")){
+            lblEmail.innerHTML = `<pan style = "color : red"> use Valif Email </span>`
+           }else{
+            lblEmail.innerHTML = " "
+           }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <dl>
+
+        <dt>Your Name</dt>
+
+        <dd><input type="text" onkeyup="VerifyName()" onblur="VerifyName()" id="txtName"></dd>
+
+        <dd id="lblName"></dd>
+
+        <dt>Email</dt>
+
+        <dd><input type="text" onkeyup="VerifyEmail()"  onblur="VerifyEmail()" id="txtEmail"></dd>
+
+        <dd id="lblEmail"></dd>
+
+        <dt>Your Comments</dt>
+
+        <dd>
+
+            <textarea onblur="HideMessage()" id="txtComments" rows="4" onkeyup="VerifyComments()" maxlength="100" cols="40"></textarea>
+
+        </dd>
+
+        <dd id="lblComments"></dd>
+
+        <dd></dd>
+
+    </dl>
+
+    <button onclick="VerifyName()">Submit</button>
+
+</body>
+
+</html>
+</body>
+</html>
