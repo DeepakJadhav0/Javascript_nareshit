@@ -85,7 +85,7 @@
     
   </div>
 
-    <div class="note-container">
+  <div class="note-container">
     <h1 class="note-title">String Formatting </h1>
     <p class="note-description">
         To provide Various methods are used to format string dynammically.
@@ -103,9 +103,10 @@
       console.log(name.lowerCase()). // JOHN Snow
       
     </pre>
+  </div>
     
-        <div class="note-container">
-    <h1 class="note-title">String Manipulation </h1>
+  <div class="note-container">
+    <h1 class="note-title">String Manipulation part - 1</h1>
     <p class="note-description">
         is used to Manipulat string 
         <ol>
@@ -121,10 +122,62 @@
     <pre class="code-section">
     var name = "john Snow"
 
-    console.log(name.toUpperCase()). // JOHN Snow
-      console.log(name.lowerCase()). // JOHN Snow
-      
+    console.log(name.length())  // 9
+    console.log(name.indexOf('n')) // 3
+    console.log(name.lastIndexOf('n'))  // 6
+    console.log(name.startsWith('j')) // True
+    console.log(name.endsWith('o'))  // False
     </pre>
   </div>
+
+  <div class="note-container">
+    <h1 class="note-title">String Manipulation part - 2 </h1>
+    <p class="note-description">
+        is used to Manipulat string 
+        <ol>
+          <li>trimStart() - It removes the blank space from Startimg of string.</li>
+          <li>trimEnd() - It removes the blank space from End of string.</li>
+          <li>trim() - removes both side space from start and end.</li>
+          <li>split() - It splits a string in specified char and returns the array.</li>
+          <li>slice() - It extratct and return the substring from string.</li>
+          <li>replace() & replaceAll() - both replaces the string with new char.</li>
+          <li>include() - chech that string include specific sub string.</li>
+        </ol>
+     </p>
+     <br>
+    <pre class="code-section">
+    var name = "john Snow"
+
+
+    console.log(name.trim().length)   // 10
+    console.log(name.split(" "))    // ['john','snow']
+    console.log(name.slice(0,3))    // joh
+    console.log(name.replace("john", "Deepak"))     // Deepak snow
+    console.log(name.includes("snow"))    //True
+
+    </pre>
+  </div>
+
+    <div class="note-container">
+    <h1 class="note-title">String Compare </h1>
+    <p class="note-description">
+        "=="  and "===" are both used to compare string.
+        <ol>
+          <li> == : to compare value of different Datatypes.</li>
+          <br>
+          <li> === : Can compare only of similar datatype , its strict Equal.</li>
+        </ol>
+     </p>
+     <br>
+    <pre class="code-section">
+      var num = "20"
+
+      console.log(num == 20)    // True
+
+      console.log(num === 20)     // False
+    </pre>
+  </div>
+
+  
 </body>
 </html>
