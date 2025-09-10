@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JavaScript Notes Template</title>
+<style>
+  /* Basic reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    padding: 40px 20px;
+    color: #333;
+  }
+
+  .note-container {
+    background-color: #fff;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  }
+
+  .note-title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    border-left: 6px solid #007bff;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+
+  .note-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 25px;
+  }
+
+  .code-section {
+    background-color: #272822;
+    color: #f8f8f2;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    padding: 20px 25px;
+    border-radius: 6px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    box-shadow: inset 0 0 10px #1a1a1a;
+  }
+</style>
+</head>
+<body>
+  <div class="note-container">
+    <h1 class="note-title">Boolean & Operators</h1>
+    <p class="note-description">
+     In JavaScript, a Boolean is a primitive data type that can only have two values: true or false. It is commonly used in conditional statements, comparisons, and logic to control the flow of the program based on certain conditions.
+    </p>
+    <pre class="code-section">
+        let a = True;
+        let b = False;
+
+
+        console.log(True)   // True
+    </pre>
+  </div>
+
+  <div class="note-container">
+    <h1 class="note-title">Operators</h1>
+    <p class="note-description">
+     Operators are used to perform operations on variable and values
+    </p>
+    <h3>Arithemitic Operators - </h3>
+    <br>
+    <p>Arithemitic are used to perform operations like Addition , substraction , multiplication etc</p>
+    <br>
+    <pre class="code-section">
+        let num1 = 10;
+        let num2 = 20:
+
+        num1 + num2     // 30
+        num2 - num1     // 10
+        num1 * num2     // 200
+        num1 / num2     // 0.2
+        num1 % num2     // 10
+        num1 ** num2    // 10 of power 20
+    </pre>
+    </p>
+    <br>
+    <h3>Assignment Operators - </h3>
+    <br>
+    <p>Assignment operations are used to assign value to variable</p>
+    <br>
+    <pre class="code-section">
+        let num1 = 10;
+        let num2 = 20:
+
+        num1 += 10      //num1 = num1 + num1
+        num1 -= 10      //num1 = num1 - 10
+        num1 *= 10      //num1 = num1 * 10
+        num1 /= 10      // num1 = num1 / 10
+    </pre>
+    <br>
+    <h3>comparisons Operators - </h3>
+    <br>
+    <p>comparisons operations are used to compare values , return boolean value</p>
+    <br>
+    <pre class="code-section">
+        let num1 = 10;
+        let num2 = 20:
+
+        num1 > num2     //False
+        num1 < num2     //True
+        num1 >= num2    //False
+        num1 == num2    //False
+        num1 === num2   //False
+        num1 !== num2    //True
+    </pre>
+    <br>
+    <h3>Logical Operators - </h3>
+    <br>
+    <p>Logical operators are used to combine or invert boolean values.</p>
+    <br>
+    <pre class="code-section">
+        let num1 = True;
+        let num2 = False:
+
+        num1 && num2     //False
+        num1 || num2    //True
+        !num1           //False 
+    </pre>
+    <br>
+    <h3>Ternary Operators - </h3>
+    <br>
+    <p>Ternary operator is Shorthand for If-else</p>
+    <br>
+    <pre class="code-section">
+        let num1 = True;
+        let num2 = False:
+
+        num1 ? true_statement : False_statemenr;
+    </pre>
+  </div>
+</body>
+</html>
