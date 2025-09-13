@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decsion making Examples</title>
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- <script>
+        function verifyCard(){
+            let Card_Number = document.getElementById("Card_Number").value;
+            let Card_CVV = document.getElementById('Card_CVV').value;
+            let Card_Expiry = document.getElementById('lstExpiry').value;
+            let lblmsg = document.getElementById('lblmsg');
+
+            if(Card_Number.length === 0){
+                lblmsg.innerHTML = "Card Required"
+            }else{
+                if(Card_Number === "4445556667890"){
+                    if(Card_CVV === "444"){
+                        if(Card_Expiry === "2026"){
+                            document.write("Payment Successful")
+                        }else{
+                            lblmsg.innerHTML = "Worng Card Expiry";
+                        }
+                    }else{
+                        lblmsg.innerHTML = "Wrong Card CVV";
+                    }
+                }else{
+                    lblmsg.innerHTML = "Invalid Card Number";
+                }
+            }
+        }
+    </script> -->
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="border border-1 p-5">
+        <div class="fs-4"> Signin or create account </div>
+        <div id="loginContainer">
+            <div class="mt-2">
+                <label class="form-label fw-bold">Email or mobile </label>
+                <div>
+                    <input type="text" id="txtUserId" class="form-control">
+                    <div id="lblIdError"></div>
+                </div>
+            </div>
+            <div class="mt-2">
+                <button onclick="ContinueClick()" class="btn btn-warning w-100">Continue</button>
+            </div>
+        </div>
+        <div id="passwordContainer" style="display: none;">
+            <div class="mt-2">
+                <label class="form-label fw-bold">Password </label>
+                <div>
+                    <input type="password" id="txtPwd" class="form-control">
+                    <div id="lblPwdError"></div>
+                </div>
+            </div>
+            <div class="mt-2">
+                <button onclick="LoginClick()" class="btn btn-warning w-100">Login</button>
+            </div>
+        </div>
+    </div>  
+</body>
+    <script>
+        let flag = ""
+
+        function ToggleContainer(){
+            document.getElementById('loginContainer').style.display = "none";
+            document.getElementById('passwordContainer').style.display = "block";
+        }
+
+        function ContinueClick(){
+            let userid = document.getElementById('txtUserId').value;
+
+            if(userid == "deepakjadhav2003@gmail.com"){
+                flag = `<h2>Login Success</h2> Activetation link sent to your ${userid}`;
+                console.log("User is correct")
+                ToggleContainer()
+            }
+            else if(userid == "+918626023303"){
+                flag = `<h2>Login Success</h2> OPT is sent you Your number : ${userid}`;
+            }else{
+                document.getElementById('lblIdError').innerHTML = `<p style="color: red;" ;> ${userid} is inValid UserId</p>`
+            }
+
+        }
+            
+        function LoginClick(){
+            let userPass = document.getElementById('txtPwd').value;
+
+            if(userPass === "2003"){
+                document.write(flag)
+            }else{
+                document.getElementById('lblPwdError').innerHTML =  `<p style="color: red;" ;> inValid Password </p>`
+            }
+        }
+        
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="card_payment" style="display: flex; flex-direction: column; width: 300px; gap: 20px;">    
+    <h2>Payment Card</h2>
+
+    <label for="Card_Number"> Card Number : </label>
+    <input type="text" max="16" name="Card_Number" id="Card_Number">
+
+    <label for="Card_CVV">CVV number :</label>
+    <input type="text" max="4" name="Card_CVV" id="Card_CVV">
+
+    <label for="lstExpiry"> Expiry year : </label>
+    <select name="lstExpiry" id="lstExpiry">
+        <option>Select Year</option>
+        <option>2025</option>
+        <option>2026</option>
+        <option>2026</option>
+    </select>
+
+    <button onclick="verifyCard()">Pay</button></div>
+
+    <h1 id="lblmsg" style="color: red;"></h1> -->
+</html>
