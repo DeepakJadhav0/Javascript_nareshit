@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var Catogery = ["Mobile","Electronics","Kids Fashion","Footware"]
+
+        function bodyload(){
+            Catogery.map((items) => {
+                var li = document.createElement('li')
+                li.textContent = items
+
+                document.querySelector('#list').appendChild(li);
+
+
+                var options = document.createElement('option')
+                options.value = items
+                options.textContent = items
+                document.querySelector('select').appendChild(options)
+
+                var ul_li = document.createElement('li')
+
+                var checkbox = document.createElement('input')
+                checkbox.type = "checkbox"
+                checkbox.value = items
+
+                var label = document.createElement('label')
+                label.textContent = items
+
+                ul_li.appendChild(checkbox)
+                ul_li.appendChild(label)
+
+                document.querySelector("#last_ul").appendChild(ul_li)
+            })
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <nav>
+
+    </nav>
+    <h3>Catogery </h3>
+    <ol id="list">
+
+    </ol>
+    <select name="" id="">
+
+    </select>
+    <ul id="last_ul" style="list-style: none;">
+
+    </ul>
+</body>
+</html>
