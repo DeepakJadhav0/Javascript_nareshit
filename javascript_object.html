@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in javascript</title>
+</head>
+<script>
+
+
+    function addItem(){
+        product.name = prompt("Enter the Product Name :")
+        product.price = parseInt(prompt("Enter the Price :"))
+        product.Qty = parseInt(prompt("Enter the Quantity of Product :"))
+
+        product.show_info()
+    }
+
+</script>
+<body>
+    <h2>Object in javascript</h2>
+    <b>Object</b>
+    <ol>
+        <li>Object is used to keep relative data and logic together</li>
+        <li> It enables clean separation and easy reusability. </li>
+        <i>Its stores data in Key and Value format</i>
+    </ol>
+
+    <br>
+    <pre>
+        <code>
+            {
+                key : value,
+                key : value
+            }
+        </code>
+    </pre>
+
+    <p>data is accessiable within the object using This kwyword and Outside the object using reference</p>
+
+    <pre>
+        <code>
+                var product = {
+        name : "",
+        price : 0,
+        Qty : 0,
+        Total : function(){
+            return this.price * this.Qty
+        },
+        show_info : function(){
+            document.write(`Name = ${this.name}  Price = ${this.price} , Qty = ${this.Qty} , So the Total is : ${this.Total()}`)
+        }
+    }
+        </code>
+    </pre>
+
+</body>
+</html>
