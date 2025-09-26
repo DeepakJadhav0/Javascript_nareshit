@@ -1,0 +1,28 @@
+{
+  "id": 999,
+  "name": "fakemon",
+  "species": "Fake Pokémon",
+  "types": ["Fire", "Dragon"],
+  "abilities": [
+    { "ability": { "name": "flame-body" } },
+    { "ability": { "name": "intimidate" } }
+  ],
+  "height": 5,
+  "weight": 100,
+  "stats": {
+    "hp": 100,
+    "attack": 120,
+    "defense": 80,
+    "special-attack": 150,
+    "special-defense": 90,
+    "speed": 130
+  },
+  "moves": [
+    { "move": { "name": "flamethrower" } },
+    { "move": { "name": "dragon-claw" } },
+    { "move": { "name": "earthquake" } },
+    { "move": { "name": "shadow-ball" } }
+  ],
+  "sprite": "https://fakepokemon.com/sprites/fakemon.png",
+  "description": "Fakemon is a mythical creature with powerful fire and dragon-type moves. It is known for its intimidating presence."
+}

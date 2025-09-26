@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let Response = fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+        .then(Response => Response.json())
+        .then(data => 
+            document.querySelector("p").innerHTML = data.explanation
+        )
+    </script>
+
+</head>
+<body>
+    <h3>Fatch Api</h3>
+    <p></p>
+</body>
+</html>

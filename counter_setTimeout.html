@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    
+            let ms = 0
+            let sec = 0
+            let min = 0
+
+            function Start(){
+                ms++
+                document.getElementById("lblms").innerHTML = `${ms}ms`;
+                if(ms === 999){
+                    ms = 0
+                    sec++
+                    document.querySelector("#lblsec").innerHTML = `${sec}sec`;
+                    if(sec === 59){
+                        sec = 0
+                        min ++
+                        document.getElementById("lblmin").innerHTML = `${min}min`
+                    }
+                }
+            }
+
+        let ref 
+        function onStart(){
+            ref = setInterval(Start,1)
+        }
+
+        function onStop(){
+            clearInterval(ref)
+            ref = null
+        }
+    </script>
+</head>
+<body>
+    <div class="h-screen flex flex-col items-center justify-center space-y-6">
+
+        <div class="flex space-x-4">
+            <div class="bg-gray-200 h-14 w-16 text-center flex items-center justify-center border-2">
+                <p id="lblmin">00min</p>
+            </div>
+            <div class="bg-gray-200 h-14 w-16 text-center flex items-center justify-center border-2">
+                <p id="lblsec">00sec</p>
+            </div>
+            <div  class="bg-gray-200 h-14 w-16 text-center flex items-center justify-center border-2">
+                <p id="lblms">000ms</p>
+            </div>
+        </div>
+
+        <div class="space-x-4">
+            <button class="px-4 py-2 bg-b lue-500 text-white rounded-md hover:bg-blue-600 transition" onclick="onStart()">Start</button>
+            <button class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition" onclick="onStop()" >Stop</button>
+        </div>
+    </div>
+</body>
+</html>
