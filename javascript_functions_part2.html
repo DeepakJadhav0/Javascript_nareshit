@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions part 2</title>
+</head>
+<body>
+    <h2>Function With Return</h2>
+         <li>Function in Default is A Void</li>
+         <li>Void refers Non-return </li>
+
+    <br>
+    <h2>Function Curring</h2>
+        <li>function can return another function so that function can be stored in function Memory</li>
+        <li>this is mechanism of config function return to another function</li>
+
+    <br>
+    <h2>Function Closure</h2>
+        <li>Closure is mechanism where member from Outer function is accessible in Inner Function</li>
+        <li>but Outer function cant access the member of inner Function</li>
+    
+    <br>
+    <h2>Anonymos Function</h2>
+        <li>Anonymos Function are Function Without name </li>
+        <li>Anonymos are mostly used in expressions and callbacks</li>
+        <li>these function are enclosed in () and evoked by IIFE (imeditly Involking Functions Expressions)</li>
+
+    <br>
+    <h2>Funtion Recursion</h2>
+        <li>Technique of Calling function inside context of function</li>
+        <li>it is used when Execution is undifinte</li>
+    
+    <br>
+    <h2>Function Chaining</h2>
+        <li>Is a mechanism where a function is invoked in content of function</li>
+        <li>It does'n have Order Dependency</li>
+        <li>Using 'This ' keyword </li>
+</body>
+<script>
+    // ----------------------------------------- Function With Return 
+
+    // function Add(a,b){
+    //     return a+b
+    // }
+
+    // function print(){
+    //     console.log(Add(10,20));
+    // }
+
+    // print()
+
+
+    // function Category(){
+    //     return["Cloths" , "Shoes" , "Blanket"]
+    // }
+    // function Print(){
+    //     Category().map((Categories)=>{
+    //         console.log(Categories)
+    //     })
+    // }
+
+    // Print();
+
+    // ------------------------------ Function Curring 
+
+    // function Demo(){
+    //     return function(){
+    //         return "Function Curry occured"
+    //     }
+    // }
+
+    // console.log(Demo()())
+
+    // function Demo(){
+    //     return function(){
+    //         return function(){
+    //             return "Welcome to function Curring"
+    //         }
+    //     }
+    // }
+
+    // console.log(Demo()()());
+
+    // --------------------------------------- Function Closure
+
+    // function Outer(){
+    //     var a = 10
+    //     function Inner(){
+    //         b = 20
+    //         return a + b
+    //     }
+
+    //     return Inner();
+    // }
+
+    // console.log(Outer())
+
+    // --------------------------------------- Anonymos Function 
+
+    // (function(){
+    //     console.log("Hiiii. From Anonymous Function")
+    // })(); // IIFE (immediatly invoking function Expression)
+
+    // var Name = function(){} // Expression
+
+    // fetch("url").then(function(){ })   // Callback
+
+    // ---------------------------------------- Function Recursion 
+
+        // function f1(){
+        //     console.log("Reply From Server .....")
+
+        //     let ref = setInterval(()=>{f1();} , 2000);
+
+        //     setTimeout(function(){
+        //         clearInterval(ref)
+        //     },5000);
+        // }
+
+        // function Factorial(n){
+        //     if(n === 0){
+        //         return 1
+        //     }else{
+        //         return n * Factorial(n-1)
+        //     }
+        // }
+
+        // console.log(Factorial(5))
+
+    // ------------------------------------------ Function Chaining 
+        
+    // function Demo(){
+    //     return {
+    //     f1(){return this},
+    //     f2(){return this}
+    //     }
+    // }
+
+    // function Demo(){
+    //     return {
+    //         A(){
+    //             console.log("A is Called..")
+    //             return this
+    //         },
+    //         B(){
+    //             console.log("B is Called...")
+    //             return this
+    //         },
+    //         c(){
+    //             console.log("C is Called...")
+    //         }
+    //     }
+    // }
+
+    // Demo().A().B().c()
+
+    // Demo().c()
+
+    // ---------------------------------- HomeWork 
+
+    //  Create a multiplication table for specified number using Recursion.
+
+    a = 10
+    function Table(n,a){
+        if(a === 0){
+            return 1;
+        }else{
+         console.log(`${n} x ${a} = ${n * a}`)
+        a--;
+        Table(n , (a - 1))
+        }
+
+    }
+
+    Table(10,a)
+
+
+ 
+
+</script>
+</html>
