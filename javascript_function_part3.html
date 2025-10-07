@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Part 3</title>
+</head>
+<body>
+    <h2>Function CallBack</h2>
+    <li>Its is a Technique of conifg set of Functions which executes when any expression or sitution occures</li>
+    <li>Functions take another function as Argument</li>
+    <li>Callback use Synchronous Technique</li>
+    <li>All Callbacks are Anoymonus </li>
+    <br>
+
+    <h2>Promises</h2>
+    <li>Promises are like real World promises made to perform specoific task</li>
+    <li>It return "resolve" and "reject"</li>
+    <li>it uses Asynchronus (non Blocking)</li>
+    <li>Promise Return 3 response  - Then (resolve) - catch (error) - finally(always)</li>
+    <br>
+
+    <h2>Asynchronus Function</h2>
+    <li>ALways Returns .then .catch or .finally</li>
+    <li>You can make it “async” so that it can “await” while reading the data.</li>
+    <br>
+
+    <h2>Pure and Impure Functions</h2>
+    <li>Pure - A function which always return same output even if parameters are changing</li>
+    <li>Impure - A function return Diffrernt value even if parameter is same</li>
+    <br>
+
+    <h2>Arrow Function</h2>
+    <li>Arrow function is Short hand for Function in expression and callbacks</li>
+    <li> ()  -  function parameter</li>
+    <li> =>  -  return</li>
+    <li> =>{} - defination</li>
+
+</body>
+<script>
+    // ---------------------------------------------------------- Callback Function 
+
+    // function FetchData(url , success , fail){
+    //     if(url === "123456789"){
+    //         success("Login is Succefull !")
+    //     }else{
+    //         fail("Please Try Again !")
+    //     }
+    // }
+
+    // FetchData(prompt("Enter URL") , 
+    //     function(response){
+    //         console.log(response)
+    //     },function(error){
+    //         console.log(error)
+    //     }
+    // )
+
+
+    // function Greeting(name , callback , callback2){
+    //     console.log(name , " Nice to Meet you !")
+    //     callback();
+    //     callback2();
+    // }
+
+    // function count(){
+    //     setTimeout(()=>{
+    //         console.log("please Wait....")
+    //     },5000)
+    // }
+
+    // function seyHello(){
+    //     console.log("Have a nice Day !")
+    // }
+
+    // Greeting("Deepak",count, seyHello)      //    ------- Takes Function as Arguments
+
+    // ------------------------------- Promises 
+
+    // let data = new Promise((reslove , reject)=>{
+
+    //     url = "DeepaK"
+    //     if(url === "Deepak"){
+    //         reslove("Login succesful...");
+    //     }else{
+    //         reject("Login Failed...");
+    //     }
+    // })
+
+    // data
+    //     .then(() => console.log("Successful"))
+    //     .catch(()=> console.log("Failed"))
+
+    // ------------------------------- Asynchronous Function
+
+    // async function GetData(){
+    //     return  await [
+    //         {name : "Deepak" , Salary : 50000},
+    //         {name : "John" , salary : 100000}
+    //     ]
+    // }
+    
+    // GetData().then((resolve)=>{
+    //     console.log(resolve)
+    // })
+    // .catch(()=>{
+    //     console.log("Data Failed to Fetch")
+    // })
+    // .finally(()=>{
+    //     console.log("Server End")
+    // })
+    
+    // fetch("https://fakestoreapi.com/products")
+    //     .then((resolve) => {
+    //         return resolve.json()
+    //     })
+    //     .then((data)=>{
+    //         data.map((items)=>{
+    //             console.log(items.title)
+    //         })
+    //     })
+
+    // ---------------------------------------- Pure and Impure
+
+    // function Greet(name){
+    //     console.log("Hello World")
+    // }
+
+    // Greet("Deepak")
+
+    // let n = 0
+    // function Sum(x){
+    //    return n += x
+    // }
+
+    // console.log(Sum(1))
+    // console.log(Sum(1))
+    // console.log(Sum(1))
+
+    // ------------------------------------------- Arrow Function
+
+    // function sum(a,b){  -- Normal
+    //     return a + b
+    // }
+
+    // let sum = (a,b) => a + b    --- arrow 
+
+    // () - use when more than one parameter
+
+
+</script>
+</html>
