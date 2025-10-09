@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP in Javascript</title>
+</head>
+<body>
+    <h2>class </h2>
+    <li> Class is Program template that provides data and logic</li>
+    <li>class is used as Blue Print to create multiple Instances</li>
+    <br>
+    <h2>Class Configuration - </h2>
+    <li>Class are config using 2 Technique</li>
+    <li>Declaration -
+        <pre>
+            class Name{
+
+                // Members
+
+            }
+        </pre>
+    </li>
+
+    <li> Expression - 
+        <pre>
+            const Name = class{
+
+            }
+        </pre>
+    </li>
+    <br>
+    <h2>Class Members</h2>
+    <li>Property</li>
+    <li>Accessor</li>
+    <li>Methods</li>
+    <li>constructor</li>
+    <br>
+    <h2>Property</h2>
+    <li>A Property is responsible for handeling data in class</li>
+    <li>config any type of data in into property </li>
+    <li>In Es6+ we can make any Property <b>Static - <i>Shared Value in Objects </i></b> which stays long as Program run.</li>
+    <br>
+    <h2> _underscore , #hash - prefix in Property</h2>
+    <li>_underscore is used to Mark as internal use but accessible</li>
+    <li>#hash forces to access only internally</li>
+    <br>
+    <h2>Accessor</h2>
+    <li>Accessor are used to control over Property</li>
+    <li>used to handeling Read and Write</li>
+    <li>Accessor are classified into 2 types
+        <ol>
+            <li>get - Getter</li>
+            <li>set - Setter</li>
+        </ol>
+    </li>
+    
+</body>
+<script>
+    // ----------------------------------- Class 
+
+    // Class Configuration 
+    // class Name{
+    //     // Members
+    // }
+
+    // let Name2 = class{
+
+    // } 
+
+    // console.log(typeof(Name))
+
+    //Class Members
+
+    //Property
+
+    // class Name{
+    //     property = value
+    // }
+
+    // class Product{
+    //     static Name;
+    //     price;
+
+    // }
+
+    // Product.Name // Static
+
+    // let obj = Product();
+
+    // obj.price // Dynamic
+
+    // ---------------------------- static 
+
+    // class Demo{
+    //     static s = 0
+    //     n = 0
+    //     constructor(){
+    //         Demo.s += 1
+    //         this.n += 1
+    //         console.log(Demo.s , this.n)
+    //     }
+    // }
+    // let obj = new Demo()
+    // let obj2 = new Demo()
+    // let obj3 = new Demo()
+
+    // ----------------------------- Property Prefix
+
+    // class Product {
+    //     _Name;
+    //     #Price;
+    // }
+    
+    // let obj = new Product();
+
+    // Product._Name //Valid
+    // Product.#Price // InValid
+
+    // -------------------------------- get & set 
+
+    // let user = prompt("Enter UserName :")
+    // let role = prompt("Enter Your Role :")
+    // let Product_Name = prompt("Enter Product Name :")
+
+    // class Product{
+    //     _product_name ;
+
+    //     get ProductName(){
+    //         return this._product_name
+    //     }
+
+    //     set ProductName(NewValue){
+    //         if(role == "admin"){
+    //             this._product_name = NewValue
+    //             console.log(this._product_name)
+    //         }else{
+    //             alert(`Dear ${user} You cant change Product name ;`)
+    //         }
+    //     }
+    // }
+
+    // let obj = new Product();
+
+    // obj.ProductName = Product_Name;
+
+    // class Person{
+    //     constructor(name){
+    //         this._name = name
+    //     }
+
+    //     get chetan(){
+    //         console.log("Getter is Called....")
+    //         return this._name
+    //     }
+
+    //     set name(value){
+    //         console.log("Setter is Called....")
+    //         this._name = value
+    //     }
+
+    // }
+
+    // let obj = new Person("Deepak")
+
+    // obj.chetan
+    //  console.log(obj.chetan)
+
+    // // console.log(obj.name)
+
+    // obj.name = "Chetan"
+
+    // console.log(obj.chetan)
+
+    // // obj.name = "Rohan";
+
+
+
+</script>
+</html>
