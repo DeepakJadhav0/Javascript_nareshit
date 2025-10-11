@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP in Javascript</title>
+</head>
+<body>
+    <h2>Methods</h2>
+    <li>Its is Similar to Function but used in class</li>
+    <li>Logic in handeled by method in class</li>
+    <li>It can be static or non Static</li>
+    <li>Methods with parameterized or without parameterized</li>
+    <br>
+
+    <h2>Constructor</h2>
+    <li>Its is used for Initialization</li>
+    <li>Constructor in js in aunonymous</li>
+    <li>it is configered using Constructor keyword</li>
+    <li>Every class has default Constructor</li>
+    <br>
+
+    <h2>ReUsability and Extendability</h2>
+    <li>Reusebility is a process of reuse code without rewriting - DRY</li>
+    <li>Extendability is process of adding more features in current version</li>
+    <br>
+
+    <h2>Inheritance</h2>
+    <li>The class can extent into another class</li>
+    <li>The existing class is known as Super Class</li>
+    <li>The newly created Class is known as Derived Class</li>
+    <li>and the Class from which Another class is Created is known as Parent Class</li>
+    <li> 1. use - derived Class <b>Extend parent class</b><br> 2. use in method <b>super.members;</b></li>
+    
+    <h2>Bank Version -</h2>
+    <select name="Bank Version" id="bank">
+        <option value="none">Select Bank version</option>
+        <option value="v1">HDFC Version 1 [JAN 2024]</option>
+        <option value="v2">HDFC Version 1 [DEC 2024]</option>
+        <option value="v3">HDFC Version Latest [2025]</option>
+    </select>
+    <button onclick="installClick()">Select</button>
+
+    <select name="Database" id="SelectID">
+        <option value="error"> Select Database </option>
+        <option value="Mysql"> Mysql </option>
+        <option value="Oracel"> Oracel</option>
+        <option value="MongoDB"> MongoDB</option>
+    </select>
+
+    <button onclick="handelInsert()">Insert</button>
+    <button onclick="handelUpdate()">Update</button>
+    <button onclick="handelDelete()">Delete</button>
+
+
+</body>
+<script>
+    // -------------------------------------- Methods
+
+    class Product{
+        Name = "Samsung TV";
+
+        Price = 20000
+
+        Qnt = 2
+
+        Total(){                        -- Method
+            return this.Price * this.Qnt
+        }
+
+        print(){
+            document.write(`Total Price of ${this.Qnt} ${this.Name} is ${this.Total()}`)
+        }
+
+    }
+
+    let Obj = new Product();
+
+    Obj.print();
+
+    // --------------------------------------- Constructor
+
+    class Database{
+        constructor(SelectedDB){
+            document.write(`${SelectedDB}  Database Connected.... <br>`)
+        }
+
+        insert(){
+            document.write("Recorded Inset...")
+        }
+        
+        update(){
+            document.write("Record updated Data....")
+        }
+
+        delet(){
+            document.write("Record Deleted.....")
+        }
+    }
+    
+   
+
+    function handelInsert(){
+         let SelectedDB = document.getElementById("SelectID").value
+        let obj = new Database(SelectedDB);
+        obj.insert();
+    }
+
+    function handelUpdate(){
+         let SelectedDB = document.getElementById("SelectID").value
+        let obj = new Database(SelectedDB);
+        obj.update();
+    }
+
+    function handelDelete(){
+         let SelectedDB = document.getElementById("SelectID").value
+        let obj = new Database(SelectedDB);
+        obj.delet();
+    }
+
+    class HDFC_Bank_Version1{
+        personal = "Bank Personal Service"
+        print(){
+            document.write(this.personal + '<br>')
+        }
+    }
+
+    class HDFC_Bank_Version2 extends HDFC_Bank_Version1{
+        loans = "Bank Loan Service "
+        
+        print(){
+            super.print()
+            document.write(this.loans + "<br>")
+        }
+    }
+
+    class HDFC_Bank_Version3 extends HDFC_Bank_Version2{
+        NRI = "NRI banking Service"
+        print(){
+            super.print()
+            document.write(this.NRI + "<br>")
+        }
+    }
+
+    function installClick(){
+        let select = document.getElementById("bank").value
+
+       switch(select){
+        case "v1":
+            let obj1 = new HDFC_Bank_Version1();
+            obj1.print();
+            break;
+
+        case "v2":
+            let obj2 = new HDFC_Bank_Version2();
+            obj2.print();
+            break;
+
+        case "v3":
+            let obj3 = new HDFC_Bank_Version3();
+            obj3.print();
+            break;
+       }
+    }
+</script>
+</html>
