@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP in Javascript</title>
+</head>
+<body onload="bodyload()">
+    <h2>Polymorphism</h2>
+    <li>Poly means "Many"</li>
+    <li>morphos means "Form"</li>
+    <li>Polymorphism is behavoiur were a single component can handel multiple functionality</li>
+    <br>
+
+    <h2>Event</h2>
+    <li>Event is messga esent by element to notify chnage</li>
+    <br>
+
+    <h2>Event handler</h2>
+    <li>js provide verious events like click , blur , focus ...</li>
+    <li>Event is configured for any element during design by using a handler called “on”</li>
+    <br>
+
+    <h2>Event Listner</h2>
+    <li>Event Listener allows to configure event for any element dynamically</li>
+    <li> If element is created dynamically and it is not in design, then events are configured using an “EventListener”.</li>
+    <br>
+<!-- 
+    <select>
+        <option> Hydrabad </option>
+        <option> Delhi</option>
+        <option> Mumbai </option>
+    </select> -->
+
+</body>
+<script>
+    // --------------------------------- Polymorphism
+
+    // class Employee{
+    //     FirstName;
+    //     LastName;
+    //     Designation;
+    //     print(){
+    //         document.write(`${this.FirstName} ${this.LastName} - ${this.Designation}`)
+    //     }
+    // }
+
+    // class Developer extends Employee{
+    //     FirstName = "Deepak";
+    //     LastName = "Jadhav";
+    //     Designation = "Developer";
+    //     role = "Developer : Build , Debug , Test , Deploy";
+
+    //     print(){
+    //         super.print()
+    //         document.write(this.role)
+    //     }
+    // }
+
+    // class Admin extends Employee{
+    //     FirstName = "Rohit";
+    //     LastName = "Sharama";
+    //     Designation = "Admin";
+    //     role = "Admin : Authorization";
+
+    //     print(){
+    //         super.print()
+    //         document.write(this.role)
+    //     }
+    // }
+
+    // class Manager extends Employee{
+    //     FirstName = "Virat";
+    //     LastName = "Kholi";
+    //     Designation = "Manager Role : Apporals";
+    //     print(){
+    //         super.print()
+    //         document.write(this.role)
+    //     }
+    // }
+
+    // let data = [new Developer() , new Admin() , new Manager()]
+
+    // console.log(data)
+
+    // -------------------------------- Event handeler
+
+        // <button onclick="function()" >Click me </button>
+
+    // --------------------------------- Event Listner
+
+    // function bodyload(){
+    //     var insertbtn = document.createElement("button")
+
+    //     insertbtn.innerHTML = "Click Me"
+        
+    //     insertbtn.addEventListener("click",function(){
+    //         console.log("Button is Created and CLicked")
+    //     })
+
+    //     document.querySelector('body').appendChild(insertbtn)
+
+    //     document.querySelector("select").addEventListener("change",()=>{
+    //         alert(`new VAlue is : ${document.querySelector('select').value}`)
+    //     })
+    // }
+
+
+    
+    
+</script>
+</html>

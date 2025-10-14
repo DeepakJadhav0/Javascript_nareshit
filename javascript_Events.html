@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in Javascript</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body  class="m-3">
+    <br>
+    <h2>What is Event Progatation and Bubbling</h2>
+    <li>Progatation is Mechanism where child simulate the event on parent </li>
+    <li>we can prevent using "stopProgatation()" in Child </li>
+    <br>
+    <!-- <div onclick="ParentClick()" class="h-20 bg-amber-100 flex justify-center items-center">
+        <button onclick="childClick(event)" class="border-[1px] border-black p-3 rounded-full bg-amber-200 hover:bg-amber-50 "> Click me </button>
+    </div> -->
+
+    <h2>How to prevent Generic elements</h2>
+    <li>Generic elements are pre-defined functions whit automatic calling function on each request</li>
+    <li>we can prevent using "preventDefault();"</li>
+
+    <!-- <form onsubmit="SubmitClicked(event)">
+        Name : <input type="text" name="UserName" id="InputName" >
+        <button>Submit </button>
+    </form> -->
+    <br>
+
+    <h2>What is Event Loop</h2>
+    <li>Event loop is Mechanism of executing task provided to an event </li>
+    <li>it follows standard Execution Order</li>
+    <ol>
+        <li>General Task </li>
+        <li>Micro Task </li>
+        <li>Macro Task </li>
+    </ol>
+    <br>
+
+    <h2>What is Event Profiling</h2>
+    <li>Event Profiling is technique where deveoper can track activity and time took to execute</li>
+    <br>
+
+    <h3>Browser Events</h3>
+    <li>in Javascript Browser "Window" object provide collection of event which you can bind with element </li>
+    <li>Events are catogarized in various groups</li>
+
+    <br>
+    <hr>
+
+    <h2>Mouse Events</h2>
+    <li>onmouseOver</li>
+    <li>onmouseout</li>
+    <li>onmousedown</li>
+    <li>onmousemove</li>
+
+    <!-- <div class="flex justify-center items-center">
+            <img onmouseover="increase(event)" class="animate-spin duration-[300ms] linear" src="https://media.istockphoto.com/id/1295967422/vector/five-point-star-vector-icon-isolated-gold-star-rating-flat-symbol-vector.jpg?s=612x612&w=0&k=20&c=f9kJnuy_7JluRDG2ZgIPAkI33173kVwOuCBXe-z-w6Y=" alt="">
+
+    </div> -->
+    <br>
+
+    <h2>Keyboard Events</h2>
+    <li>onkeyup</li>
+    <li>onkeydown</li>
+    <li>onkeypress</li>
+    <br>
+
+    <h2>Timer Event</h2>
+    <li>setTimeout()</li>
+    <li>clearTimeout()</li>
+    <li>setInterval()</li>
+    <li>clearInterval()</li>
+    <br>
+
+    <h2>Button Events</h2>
+    <li>onclick()</li>
+    <li>ondblclick()</li>
+    <li>oncontextmenu()</li>
+
+    <!-- <div oncontextmenu="return false">
+        <p>hi this is screct code</p>
+    </div> -->
+    <br>
+    <h2>Clipboard Events</h2>
+    <li>oncut</li>
+    <li>oncopy</li>
+    <li>onpaste</li>
+
+    <!-- <div>
+        PAssword : <input onpaste="return false" type="text">
+        conform : <input oncopy="alert('copied !')" type="text">
+    </div> -->
+    <br>
+    <h2>Element State Event</h2>
+    <li>onblur()</li>
+    <li>onfocus()</li>
+    <li>onchange()</li>
+<!--     
+    <input type="text" onfocus="" class="border-2"> -->
+    <br>
+    <h2>Form Elemnets</h2>
+    <li>onsubmit()</li>
+    <li>onReset()</li>
+    
+
+</body> 
+<script>
+// --------------------------------------- Event Propogation
+
+//     function childClick(event){
+//         alert("Child Element is Clicked !")
+//         event.stopPropagation();
+
+//     }
+
+//     function ParentClick(){
+//         alert("Parent is CLicked !")
+//    }
+
+    // ------------------------------------ Prevent Generic 
+
+    // function SubmitClicked(event){
+    //     event.preventDefault();
+    //     alert("Form Subbmited !")
+    // }
+
+    // ----------------------------------------  Event Loop 
+
+    // console.log("Start")
+
+    // setTimeout(()=>{
+    //     console.log("THis is MacroTask")
+    // })
+
+    // var prom = new Promise((resolve,reject)=>{
+    //     resolve("This is microTask")
+    // })
+
+    // prom.then((value)=>{
+    //     console.log(value)
+    // })
+
+    // console.log("End")
+
+    // --------------------------------------- Mouse EVents 
+
+    // function increase(e){
+    //     e.target.className = "animate-spin duration-[300ms] linear"
+    // }
+
+</script>   
+</html>
